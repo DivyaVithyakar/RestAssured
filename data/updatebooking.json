@@ -1,0 +1,11 @@
+{
+        "firstname": "Vithya",
+        "lastname": "DivyaRam",
+        "totalprice": 101,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2022-12-01",
+            "checkout": "2022-12-04"
+        },
+        "additionalneeds": "Dinner Removed"
+    }

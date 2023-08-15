@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-15T21:37:36 CEST" name="Default suite" finished-at="2023-08-15T21:37:41 CEST" duration-ms="4564">
+    <groups>
+    </groups>
+    <test started-at="2023-08-15T21:37:36 CEST" name="Default test" finished-at="2023-08-15T21:37:41 CEST" duration-ms="4564">
+      <class name="jira.DeleteIssue">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:jira.DeleteIssue@157853da]" started-at="2023-08-15T21:37:41 CEST" name="setUp" finished-at="2023-08-15T21:37:41 CEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="deleteIssue()[pri:0, instance:jira.DeleteIssue@157853da]" started-at="2023-08-15T21:37:41 CEST" name="deleteIssue" finished-at="2023-08-15T21:37:41 CEST" depends-on-methods="jira.Updateissue.updateIssue" duration-ms="333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteIssue -->
+      </class> <!-- jira.DeleteIssue -->
+      <class name="jira.Updateissue">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:jira.Updateissue@71c3b41]" started-at="2023-08-15T21:37:40 CEST" name="setUp" finished-at="2023-08-15T21:37:40 CEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="updateIssue()[pri:0, instance:jira.Updateissue@71c3b41]" started-at="2023-08-15T21:37:40 CEST" name="updateIssue" finished-at="2023-08-15T21:37:41 CEST" depends-on-methods="jira.CreateIssue.createIssue" duration-ms="376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateIssue -->
+      </class> <!-- jira.Updateissue -->
+      <class name="jira.CreateIssue">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:jira.CreateIssue@236e3f4e]" started-at="2023-08-15T21:37:36 CEST" name="setUp" finished-at="2023-08-15T21:37:37 CEST" duration-ms="623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createIssue()[pri:0, instance:jira.CreateIssue@236e3f4e]" started-at="2023-08-15T21:37:37 CEST" name="createIssue" finished-at="2023-08-15T21:37:40 CEST" duration-ms="3151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createIssue -->
+      </class> <!-- jira.CreateIssue -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
