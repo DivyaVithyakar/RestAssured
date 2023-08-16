@@ -3,24 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="chaining.DeleteBooking">
+      <class name="petStore.CreateUser">
         <methods>
-          <include name="base"/>
-          <include name="deleteBooking"/>
+          <include name="createUser"/>
         </methods>
-      </class> <!-- chaining.DeleteBooking -->
-      <class name="chaining.CreateBooking">
-        <methods>
-          <include name="createBooking"/>
-          <include name="base"/>
-        </methods>
-      </class> <!-- chaining.CreateBooking -->
-      <class name="chaining.UpdateBooking">
-        <methods>
-          <include name="base"/>
-          <include name="updateBooking"/>
-        </methods>
-      </class> <!-- chaining.UpdateBooking -->
+      </class> <!-- petStore.CreateUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
