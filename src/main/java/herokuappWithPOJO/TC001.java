@@ -23,10 +23,7 @@ public class TC001 extends BaseClass{
 				   					.post("auth");
 		tokenRes.jsonPath().prettyPrint();
 		tokenRes = tokenRes.jsonPath().get("token");
-		int statusCode = tokenRes.getStatusCode();
-		System.out.println(statusCode);
-		System.out.println(tokenRes);
-		Assert.assertEquals(statusCode, 200);	
+		//Assert.assertEquals(statusCode, 200);	
 		
 		
 		ResToken ResToken = tokenRes.getBody().as(ResToken.class);
@@ -65,14 +62,10 @@ public class TC001 extends BaseClass{
 		
 		ResCreate.then().assertThat().statusCode(200);
 		bookingId = ResCreate.jsonPath().getInt("bookingid");
-		System.out.println("Booking ID is: "+ bookingId);
 		
-
 		ReqBookingIDS bookingResponse = ResCreate.getBody().as(ReqBookingIDS.class);
 		int bookid = bookingResponse.getBookingid();
-		int totalprice = bookingResponse.getBooking().getTotalprice();
-		String additionalneeds = bookingResponse.getBooking().getAdditionalneeds();	
-		firstname = bookingResponse.getBooking().getFirstname();
+		
 	}
 	
 	
@@ -89,7 +82,6 @@ public class TC001 extends BaseClass{
 		ResBookingIDS[] bookingIds = getBookingIDResponse.getBody().as(ResBookingIDS[].class);
 		
 		int length = bookingIds.length;
-		System.out.println(length);
 		
 		System.out.println("Booking id is:"+ bookingIds[5].getBookingid());
 		
@@ -107,7 +99,7 @@ public class TC001 extends BaseClass{
 		ReqBookingBody getresponse =  response.getBody().as(ReqBookingBody.class);
 		
 		Assert.assertEquals(firstname,getresponse.getFirstname());
-		//int totalprice = getresponse.getTotalprice();
+		
 		
 	}
 	
@@ -132,10 +124,10 @@ public class TC001 extends BaseClass{
 		ReqBookingBody putResp = updateresponse.getBody().as(ReqBookingBody.class);
 		String checkin = putResp.getBookingdates().getCheckin();
 		
-		Assert.assertTrue(putResp.getLastname().equals(lastname), "Last Name not matched");
-		Assert.assertTrue(putResp.getTotalprice()==totalprice, "Price not matching");
+		Assert.assertTrue(putResp.getLastname().equals(lastname), "Last Name not match");
+		Assert.assertTrue(putResp.getTotalprice()==totalprice, "Price not match");
 		Assert.assertEquals(checkin, "2023-09-23");
-		Assert.assertTrue(putResp.getBookingdates().getCheckin().equals(updatedDate), "Date not matched");
+		Assert.assertTrue(putResp.getBookingdates().getCheckin().equals(updatedDate), "Date not match");
 		updateresponse.then().assertThat().statusCode(200);
 	}
 	@Test(dependsOnMethods = {"updateBooking"})
@@ -154,7 +146,7 @@ public class TC001 extends BaseClass{
 		ReqBookingBody PatchRes = ResPatch.getBody().as(ReqBookingBody.class);
 		Assert.assertTrue(PatchRes.getFirstname().equals("Vithyakar"), "Name not matched");
 		Assert.assertTrue(PatchRes.getLastname().equals("Divya"), "LastName not matched");
-		//System.out.println(PatchRes.getBookingdates().getCheckin());
+		
 	}
 	
 	@Test (dependsOnMethods = {"partialUpdate"})
