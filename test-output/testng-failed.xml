@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="petStore.CreateUser">
+      <class name="herokuappWithPOJO.TC001">
         <methods>
-          <include name="createUser"/>
+          <include name="partialUpdate"/>
+          <include name="setUp"/>
+          <include name="getBookingIds"/>
+          <include name="updateBooking"/>
+          <include name="ping"/>
+          <include name="getBooking"/>
+          <include name="deleteBooking"/>
+          <include name="createBooking"/>
+          <include name="generateToken"/>
         </methods>
-      </class> <!-- petStore.CreateUser -->
+      </class> <!-- herokuappWithPOJO.TC001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
