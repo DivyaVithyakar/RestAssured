@@ -3,19 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="herokuappWithPOJO.TC001">
+      <class name="restAssuredwithLombok.TC">
         <methods>
-          <include name="partialUpdate"/>
-          <include name="setUp"/>
-          <include name="getBookingIds"/>
-          <include name="updateBooking"/>
-          <include name="ping"/>
-          <include name="getBooking"/>
-          <include name="deleteBooking"/>
           <include name="createBooking"/>
-          <include name="generateToken"/>
+          <include name="getBookingDetails"/>
+          <include name="updateBooking"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- herokuappWithPOJO.TC001 -->
+      </class> <!-- restAssuredwithLombok.TC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
